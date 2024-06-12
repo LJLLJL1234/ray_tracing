@@ -1,8 +1,8 @@
 import pytest
 import numpy as np
-import sys
-sys.path.append('/Users/Lauri.Lehtola/private_projects/ray_tracing')
-from src.utils import _is_point, create_point, _is_vector, create_vector, _is_close, add_tuples, substract_tuples
+# import sys
+# sys.path.append('/Users/Lauri.Lehtola/private_projects/ray_tracing')
+from src.utils.utils import _is_point, create_point, _is_vector, create_vector, _is_close, add_tuples, substract_tuples
 
 @pytest.mark.parametrize(
     "coordinates, expected",
