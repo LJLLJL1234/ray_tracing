@@ -21,4 +21,5 @@ class Canvas:
         
     def canvas_to_ppm(self):
         header = f"P3\n{self.width} {self.height}\n255"
+        body = f"joopajoo"
         return header
