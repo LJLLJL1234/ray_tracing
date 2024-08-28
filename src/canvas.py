@@ -46,6 +46,12 @@ class Canvas:
         
         return "\n".join(ppm_rows)
     
-    # def _split_ppm_body(self, ppm_body):
+    def save_ppm_file(self):
+        ppm_string = self.canvas_to_ppm()
+        output_path = "/Users/Lauri.Lehtola/private_projects/ray_tracing/output/test_file.ppm"
+
+        with open(output_path, 'w') as file:
+            file.write(ppm_string)
+
 
 
