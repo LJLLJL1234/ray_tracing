@@ -50,3 +50,6 @@ def cross_product(a, b):
     a_values = a[:-1]
     b_values = b[:-1]
     return np.cross(a_values, b_values)
+
+def round_to_int(vector):
+    return np.round(vector).astype(int)
