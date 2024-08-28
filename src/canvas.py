@@ -44,7 +44,7 @@ class Canvas:
                 temp_row = color_to_be_added + " "
         ppm_rows.append(temp_row.rstrip()) 
         
-        return "\n".join(ppm_rows)
+        return "\n".join(ppm_rows) + "\n"
     
     def save_ppm_file(self):
         ppm_string = self.canvas_to_ppm()
