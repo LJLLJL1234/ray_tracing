@@ -49,3 +49,4 @@ def test_scaled_colors():
     assert scaled_colors[0] == 255
     assert scaled_colors[1] == 128
     assert scaled_colors[2] == 0
+

@@ -25,6 +25,24 @@ from src.canvas import Canvas
 
 # print(result)
 
-canvas = Canvas(3, 5)
-ppm_header = canvas.canvas_to_ppm()
-print(ppm_header)
+canvas = Canvas(5, 3, ppm_split=32)
+canvas.write_pixel(0,0,RayColor(1.5, 0, 0))
+canvas.write_pixel(2,1,RayColor(0, 0.5, 0))
+canvas.write_pixel(4, 2, RayColor(-0.5, 0, 1))
+
+expected_body = """255 0 0 0 0 0 0 0 0 0 0 0 0 0 0\n
+                    0 0 0 0 0 0 0 128 0 0 0 0 0 0 0\n
+                    0 0 0 0 0 0 0 0 0 0 0 0 0 0 255"""
+test_ppm = "\n".join(canvas.canvas_to_ppm().splitlines()[3:])
+print("Test ppm: ")
+print(test_ppm)
+print("Expected:")
+print(expected_body)
+# test_body = "\n".join(test_ppm.splitlines()[3:])
+
+# print(test_ppm)
+# print("#############")
+# print(test_body)
+# print("#############")
+# test_ppm = "\n".join(canvas.canvas_to_ppm().splitlines()[3:])
+# print(test_ppm)
