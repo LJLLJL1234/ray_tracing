@@ -32,4 +32,8 @@ from src.ray_vector import RayVector
 # def round_to_int(vector):
 #     return np.round(vector).astype(int)
 
+def dot_product(a, b):
+    
+def cross_product(a, b):
 
+def round_to_int(a):
